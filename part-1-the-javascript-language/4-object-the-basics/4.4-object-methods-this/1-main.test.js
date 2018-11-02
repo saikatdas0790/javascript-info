@@ -6,10 +6,6 @@ describe("calculator", () => {
     calculator.input.value2 = 3;
   });
 
-  // afterEach(() => {
-  //   global.prompt.restore();
-  // });
-
   test("the sum is 5", () => {
     expect(calculator.sum()).toBe(5);
   });

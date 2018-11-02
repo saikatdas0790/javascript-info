@@ -1,8 +1,8 @@
 let calculator = {
   input: {},
   read() {
-    this.input.value1 = Number(prompt("Enter the first value"));
-    this.input.value2 = Number(prompt("Enter the second value"));
+    this.input.value1 = Number(prompt("Enter the first value")) || 0;
+    this.input.value2 = Number(prompt("Enter the second value")) || 0;
   },
   sum() {
     return this.input.value1 + this.input.value2;
