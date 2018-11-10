@@ -1,19 +1,14 @@
 const getMaxSubSum = arr => {
-  const sumArray = sum(arr);
+  let maxSoFar = 0;
+  let maxEndingHere = 0;
 
-  for (const element of arr) {
-    if (element > sumArray) {
-      return element;
-    }
-  }
-  while (sumArray < sum(arr.slice(1))) arr.shift();
-  while (sumArray < sum(arr.slice(0, arr.length - 1))) arr.pop();
+  arr.forEach(element => {
+    maxEndingHere = maxEndingHere + element;
+    if (maxEndingHere < 0) maxEndingHere = 0;
+    if (maxSoFar < maxEndingHere) maxSoFar = maxEndingHere;
+  });
 
-  return sum(arr);
-};
-
-const sum = arr => {
-  return arr.reduce((sum, num) => sum + num, 0);
+  return maxSoFar;
 };
 
 module.exports = getMaxSubSum;
