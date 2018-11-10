@@ -1,4 +1,4 @@
-truncate = require("./3-truncate-the-text");
+const truncate = require("./3-truncate-the-text");
 
 describe("truncate", function() {
   it("truncate the long string to the given length (including the ellipsis)", function() {

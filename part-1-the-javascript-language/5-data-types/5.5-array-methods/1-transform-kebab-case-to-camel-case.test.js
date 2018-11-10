@@ -1,4 +1,4 @@
-camelize = require("./1-transform-kebab-case-to-camel-case");
+const camelize = require("./1-transform-kebab-case-to-camel-case");
 
 describe("camelize", function() {
   it("leaves an empty line as is", function() {
