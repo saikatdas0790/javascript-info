@@ -5,11 +5,8 @@ describe("Get average age", () => {
 
   let arr = [john, pete, mary];
 
-  let getAverageAge = persons => {
-    return (
-      persons.reduce((sum, current) => sum + current.age, 0) / persons.length
-    );
-  };
+  let getAverageAge = persons =>
+    persons.reduce((sum, current) => sum + current.age, 0) / persons.length;
 
   test("Average age", () => {
     expect(getAverageAge(arr)).toBe(28);
