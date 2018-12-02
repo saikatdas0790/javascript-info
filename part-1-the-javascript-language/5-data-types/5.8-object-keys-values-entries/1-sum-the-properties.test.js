@@ -1,7 +1,6 @@
 describe("sumSalaries", () => {
-  const sumSalaries = salaries => {
-    return Object.values(salaries).reduce((sum, current) => sum + current, 0);
-  };
+  const sumSalaries = salaries =>
+    Object.values(salaries).reduce((sum, current) => sum + current, 0);
   it("returns sum of salaries", () => {
     let salaries = {
       John: 100,
