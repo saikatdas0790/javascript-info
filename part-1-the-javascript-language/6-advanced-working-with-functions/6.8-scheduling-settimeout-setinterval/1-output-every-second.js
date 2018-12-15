@@ -1,6 +1,10 @@
 const printNumbersTimeout = (from, to) => {
+  let index = from;
   for (let index = from; index <= to; index++)
-    setTimeout(() => console.log(index), 1000);
+    setTimeout(() => {
+      if (index <= to) console.log(index++);
+      else clearInterval(intervalID);
+    }, 1000);
 };
 
 const printNumbersInterval = (from, to) => {
